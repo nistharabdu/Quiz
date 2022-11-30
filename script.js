@@ -17,7 +17,7 @@ console.log(question)
 
 
 submitBtn.addEventListener('click',function(event){
-    if(!checkRadioBtns(qIndex).isSelected){
+    if(!checkRadioBtns(qIndex)){
         alert('Please choose an answer')
     }
     else{
@@ -48,7 +48,7 @@ function checkRadioBtns(ind){
             }
         }
     })
-    return { isSelected , selectedAnswer} ;
+    return isSelected;
 }
 
 playAgain.addEventListener('click',function(){
