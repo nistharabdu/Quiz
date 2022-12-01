@@ -13,8 +13,6 @@ var qIndex = 1;
 var correctAnswerCount = 0;
 var wrongAnswerCount = 0;
 var score = 0;
-console.log(question)
-
 
 submitBtn.addEventListener('click',function(event){
     if(!checkRadioBtns(qIndex)){
@@ -29,8 +27,9 @@ submitBtn.addEventListener('click',function(event){
 function checkRadioBtns(ind){
     var selectedAnswer;
     var isSelected = false;
-    const radioButtons = document.querySelectorAll('input[name="answer"]');
     var correctAnswer; 
+    const radioButtons = document.querySelectorAll('input[name="answer"]');
+    
     question[ind-1].answers.forEach(function(eachAnswer){
         if(eachAnswer.isCorrect){
             correctAnswer = eachAnswer.answer;
